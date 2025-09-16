@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code&Craft Tarieven</title>
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      /* custom keyframes */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade {
+        animation: fadeIn 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900 leading-relaxed">
+    <!-- NAVBAR -->
+    <header
+      class="bg-gradient-to-r from-blue-700 to-orange-500 text-white shadow-md sticky top-0 z-50 border-b-2 border-orange-400">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold tracking-tight">Code&Craft</h1>
+
+        <!-- Hamburger Button -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <div class="space-y-1.5">
+            <span class="block w-6 h-0.5 bg-white" id="bar1"></span>
+            <span class="block w-6 h-0.5 bg-white" id="bar2"></span>
+            <span class="block w-6 h-0.5 bg-white" id="bar3"></span>
+          </div>
+        </button>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-6 font-medium">
+          <a href="index.html" class="hover:text-orange-300 transition">Home</a>
+          <a href="over-ons.html" class="hover:text-orange-300 transition"
+            >Over ons</a
+          >
+          <a href="contact.html" class="hover:text-orange-300 transition"
+            >Contact</a
+          >
+          <a href="tarief.html" class="hover:text-orange-300 transition"
+            >Tarieven</a
+          >
+        </nav>
+      </div>
+
+      <!-- Mobile Nav -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden max-h-0 overflow-hidden flex-col bg-blue-800 text-white px-4 transition-all duration-500 ease-in-out">
+        <a
+          href="index.html"
+          class="py-3 border-b border-blue-700 hover:text-orange-300"
+          >Home</a
+        >
+        <a
+          href="over-ons.html"
+          class="py-3 border-b border-blue-700 hover:text-orange-300"
+          >Over ons</a
+        >
+        <a
+          href="contact.html"
+          class="py-2 border-3 border-blue-700 hover:text-orange-300"
+          >Contact</a
+        >
+        <a href="tarief.html" class="py-3 hover:text-orange-300">Tarieven</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="bg-gradient-to-r from-blue-700 to-orange-500 py-20 text-center relative">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative z-10">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-white">
+          Tarieven Code&Craft
+        </h2>
+        <p class="text-lg md:text-xl max-w-xl mx-auto mb-8 text-white/90">
+          Hier vind je een overzicht van onze prijzen voor de verschillende
+          diensten die wij aanbieden.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="container mx-auto py-16 px-4">
+      <h3 class="text-3xl font-semibold mb-8 text-center">Onze Prijzen:</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white border rounded-xl shadow hover:shadow-xl transition p-6">
+          <h4 class="font-bold text-xl mb-2">Basic</h4>
+          <p class="text-4xl font-extrabold mb-6">$175</p>
+          <p class="text-gray-600 mb-4">Ideaal voor kleine projecten.</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+            Kies
+          </button>
+        </div>
+        <div
+          class="bg-white border rounded-xl shadow hover:shadow-xl transition p-6">
+          <h4 class="font-bold text-xl mb-2">Pro</h4>
+          <p class="text-4xl font-extrabold mb-6">$250</p>
+          <p class="text-gray-600 mb-4">
+            Voor middelgrote projecten met extra functies.
+          </p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+            Kies
+          </button>
+        </div>
+        <div
+          class="bg-white border rounded-xl shadow hover:shadow-xl transition p-6">
+          <h4 class="font-bold text-xl mb-2">Hosting</h4>
+          <p class="text-4xl font-extrabold mb-6">€20/maand</p>
+          <p class="text-gray-600 mb-4">
+            Betrouwbare hosting voor jouw website.
+          </p>
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+            Neem contact op
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-16">
+      <div class="container mx-auto text-center space-y-4">
+        <p>
+          &copy; 2025 Code&Craft. Een bedrijf door Zerion. All rights reserved.
+        </p>
+        <div class="flex justify-center gap-6">
+          <a href="privacy.html" class="hover:text-white transition"
+            >Privacyverklaring</a
+          >
+          <a href="voorwaarden.html" class="hover:text-white transition"
+            >Algemene voorwaarden</a
+          >
+          <a href="contact.html" class="hover:text-white transition">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const bar1 = document.getElementById("bar1");
+      const bar2 = document.getElementById("bar2");
+      const bar3 = document.getElementById("bar3");
+
+      let menuOpen = false;
+
+      toggleBtn.addEventListener("click", () => {
+        menuOpen = !menuOpen;
+
+        // Toggle mobile menu height
+        if (menuOpen) {
+          mobileMenu.classList.remove("max-h-0");
+          mobileMenu.classList.add("max-h-96");
+        } else {
+          mobileMenu.classList.add("max-h-0");
+          mobileMenu.classList.remove("max-h-96");
+        }
+
+        // Animate bars to X
+        bar1.classList.toggle("rotate-45");
+        bar1.classList.toggle("translate-y-2");
+
+        bar2.classList.toggle("opacity-0");
+
+        bar3.classList.toggle("-rotate-45");
+        bar3.classList.toggle("-translate-y-2");
+      });
+    </script>
+  </body>
+</html>
